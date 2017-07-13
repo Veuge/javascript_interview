@@ -18,3 +18,9 @@ function isPrime(number){
     }
     return true;
 }
+
+console.log("isPrime");
+console.log(isPrime(0));
+console.log(isPrime(1));
+console.log(isPrime(17));
+console.log(isPrime(10000000000000));
