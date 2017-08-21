@@ -1,14 +1,19 @@
-function reduce(array, fnc){
-    var result = 0;
-    for(var i = 0; i < array.length - 1; i + 2){
-        result += fnc.call(this, array[i], array[i + 1]);
+function reduce(array, fn, initialValue){
+    for(var i = 0; i < array.length; i++){
+        var current = array[i];
+        initialValue = fn(initialValue, current);
     }
-    return result;
+    return initialValue;
+}
+
+function sum(a, b){
+    return a + b;
+}
+
+function mul(a, b){
+    return a * b;
 }
 
 console.log("reduce");
-
-var fnc = function(a, b){
-    return a + b;
-}
-console.log(reduce([1,2,3,4], fnc));
+console.log(reduce([1, 2, 3, 4], sum, 0));
+console.log(reduce([1, 2, 3, 4], mul, 1));

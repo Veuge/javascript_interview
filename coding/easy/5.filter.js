@@ -18,7 +18,7 @@ console.log("filter");
 
 var fnc = function(n){
     return n < 3;
-}
+};
 
 console.log(filter([1, 2, 3, 4], fnc));
 
