@@ -8,7 +8,7 @@ function isBalanced(string) {
         else if(string[i] === '}'){
             total--;
         }
-        
+
         if(total < 0){
             return false;
         }
