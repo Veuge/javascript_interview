@@ -15,3 +15,4 @@ console.log(fibo(0));
 console.log(fibo(1));
 console.log(fibo(10));
 console.log(fibo(20));
+// console.log(fibo(50));
